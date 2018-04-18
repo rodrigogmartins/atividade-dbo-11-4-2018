@@ -43,12 +43,13 @@ ol.addEventListener('click', function(event) {
 
 let cliques = 1;
 ol.addEventListener('dblclick', function(event) {
-    console.log(ol.children[0].firstChild.nodeValue);
-    cliques++;
-    let nomeCurso = event.target.textContent.replace('X', '');
-    return (cliques % 2 === 0) ?
-        curso0.value = nomeCurso :
-        curso1.value = nomeCurso;
+    if (curso0 !== '' && curso1 !== '') {
+        cliques++;
+        let nomeCurso = event.target.textContent.replace('X', '');
+        return (cliques % 2 === 0) ?
+            curso0.value = nomeCurso :
+            curso1.value = nomeCurso;
+    }        
 });
 
 trocarCurso.addEventListener('click', function() {
