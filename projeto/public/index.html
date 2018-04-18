@@ -8,7 +8,37 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        
+        <form>
+            <div id="addcurso">
+                <label for="descricao">Adicionar curso</label>
+                <input id="descricao" type="text" maxlength="50" size="20"
+                pattern="[A-Za-z]{5,20}">
+                <div id="botoes">
+                    <input type="submit" value="Adicionar">
+                </div>
+            </div>
+
+            <label for="prioridade">Cursos</label>
+            <select id="prioridade">
+                <option>Administração</option>
+                <option>Direito</option>
+                <option>Medicina</option>
+                <option>Enfermagem</option>
+                <option>Pedagogia</option>
+            </select>
+
+        </form>
+
+        <ol></ol>
+
+        <div id="trocarCurso">
+            <input id="curso0" type="text" readonly>
+            <br>
+            <input id="curso1" type="text" readonly>
+            <p>
+                <button id="trocar"> Trocar </button>
+            </p>
+        </div>
     </body>
     <script src="js/main.js"></script>
 </html>
